@@ -1,3 +1,25 @@
 .App {
   text-align: center;
 }
+
+.Navbar {
+    background-color: #540D0D;
+    padding: 50px;
+    
+}
+
+.Navbar h3 {
+    margin: 0;
+    color:white;
+    font-size: 45px;
+}
+
+.card {
+    width: 25vw;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card-container {
+    display:flex;
+}
