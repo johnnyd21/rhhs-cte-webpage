@@ -4,12 +4,30 @@ import './Bootstrap.css';
 import Navbar from './Components/Navbar';
 import Academy_Card from './Components/Academy_Card';
 import LionsTV from './Components/LionsTV';
+import Splash from './Components/splash';
+import Dashboard from './Components/Dashboard';
 
-function App(props) {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      "number1": "Please select your Number 1 Choice of Academy:",
+      "number2": "Please select your Number 2 Choice of Academy:",
+      "number3": "Please select your Number 3 Choice of Academy:"
+    };
+  }
+  makeChoice = (title, choice) => {
+    this.setState(state => {
+      state[title] = choice
+      return state
+    })
+  }
+
+ render() {
   return (
     <div className="App">
       <Navbar />
-
+      <Splash />
       <div className="card-container">
         <Academy_Card 
           title="Software Engineering Pathway" 
@@ -32,8 +50,13 @@ function App(props) {
           alt="Image of Art & Design"
           webpage="https://www.richmondhillhs.org/apps/pages/index.jsp?uREC_ID=1932672&type=d&pREC_ID=2066008"/>
         </div>
+     
+        <Dashboard number1={this.state.number1} number2={this.state.number2} number3={this.state.number3} />
+
     </div>
+          
   );
+ }
 }
 
 export default App;

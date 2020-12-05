@@ -1,0 +1,22 @@
+.Splash{
+  text-align: center;
+  height: 75vh;
+  background: url('../images/lions.jpg');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px
+}
+
+.Splash .text {
+	color: white;
+	font-weight: 700;
+}
+
+.Splash .primary {
+	font-size: 5rem;
+	padding-top: 12vh;
+}
+
+.Splash .secondary {
+	font-size: 3rem;
+}

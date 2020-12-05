@@ -9,6 +9,7 @@ function Academy_Card(props) {
             <h5>{props.title}</h5>
             <p> {props.text} </p>
             <a href= {props.webpage} className="btn btn-primary">Find Out More!</a>
+            <button onClick={() => {props.makeChoice(props.title)}}>Click to Add to your Dashboard!</button>
         </div>
         </div>
     </div>

@@ -2,17 +2,19 @@
   text-align: center;
 }
 
-.Navbar {
+.navbar {
     background-color: #540D0D;
     padding: 50px;
-    
 }
 
-.Navbar h3 {
-    margin: 0;
+a.navbar-brand{
     color:white;
-    font-size: 45px;
 }
+
+a.nav-link {
+    color:white;
+}
+
 
 .card {
     width: 25vw;
