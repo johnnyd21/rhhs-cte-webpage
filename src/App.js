@@ -1,59 +1,52 @@
 import React from 'react';
-import './App.css';
-import './Bootstrap.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './Components/Navbar';
-import Academy_Card from './Components/Academy_Card';
-import LionsTV from './Components/LionsTV';
+import './Components/css/App.css';
+import './Components/css/Bootstrap.css';
+import BootstrapNavbar from './Components/Navbar';
+import Card from './Components/Card';
 import Splash from './Components/splash';
-import Dashboard from './Components/Dashboard';
+import Home from './Components/Home'
+
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      "choices":[]
-    };
-  }
-  makeChoice = (choice) => {
-    this.setState(state => {
-      state["choices"].push(choice)
-      return state
-    })
-  }
+  
 
  render() {
   return (
     <div className="App">
-      <Navbar />
+      <BootstrapNavbar />
       <Splash />
-      <div className="card-container">
-        <Academy_Card 
-          title="Software Engineering Pathway" 
-          text="This pathway gives students the ability to be innovative with technology and learn a variety of computer programming languages." 
-          img="https://inteng-storage.s3.amazonaws.com/img/iea/XD6KZvJ2Gv/sizes/software-trends_resize_md.jpg"
-          alt="Image of Software Engineering Pathway"
-          webpage="https://www.richmondhillhs.org/apps/pages/index.jsp?uREC_ID=1932698&type=d&pREC_ID=2065998"
-          makeChoice={this.makeChoice} />
-      
-        <Academy_Card 
-          title="Academy of Hospitality & Tourism" 
-          text="Richmond Hill High Schools's Academy of Hospitality & Tourism helps students create career paths in one of the world’s and New York City's  largest industries, from hotels to sports, entertainment, and event management." 
-          img="https://potomac.edu/wp-content/uploads/2019/04/Studying-Hospitality-Tourism.jpg"
-          alt="Image of Academy of Hospitality & Tourism"
-          webpage="https://www.richmondhillhs.org/apps/pages/index.jsp?uREC_ID=1932678&type=d&pREC_ID=2066003"
-          makeChoice={this.makeChoice} />
+      <div className="card-bigcontainer">
+        <Card
+            imageUrl='https://snap.berkeley.edu/img/snap-byob.png' 
+            title= 'Freshmen year 9th'
+            body='Students learn basic concepts of computer science through SNAP!, an online-based 
+            programming language made by University of Berkeley and MIT.'
+            />
 
-        <Academy_Card 
-          title="Art & Design Academy" 
-          text="The Richmond Hill High School visual arts classes explore basic and advanced drawing, the world of ceramics, portfolio design and computer graphics." 
-          img="https://i.guim.co.uk/img/media/e6ee88c4b60cd6fd315fb472beb8989920dd59a9/7_231_882_529/master/882.jpg?width=300&quality=85&auto=format&fit=max&s=b17e271238f5286e2fbfa3d4aca6f0b8"
-          alt="Image of Art & Design"
-          webpage="https://www.richmondhillhs.org/apps/pages/index.jsp?uREC_ID=1932672&type=d&pREC_ID=2066008"
-          makeChoice={this.makeChoice}/>
+            <Card
+            imageUrl='https://yt3.ggpht.com/ytc/AAUvwngUVZBmVudvFKbysQZGc-aE7R-qOspK3d7lrZjI=s900-c-k-c0x00ffffff-no-rj' 
+            title= 'Sophmore year 10th'
+            body='Students learn the most popular coding language, Python
+            , through Amazon-sponsored platform called Edhesive. Students will also able to be eligible to take PCEP – Certified 
+            Entry-Level Python Programmer exam from Python Institute.'
+            />
+
+             <Card
+            imageUrl='https://i.ytimg.com/vi/2_rXHox_J0I/maxresdefault.jpg' 
+            title= 'Junior year 11th'
+            body='Students will prepare and take AP Computer Science Principles using Edhesives curriculum.'
+            />
+
+            <Card
+            imageUrl='https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_0c51d2c2e5f85fe45126eb818f748267/google-cloud-shell.png' 
+            title= 'Senior year 12th'
+            body='In CS and the City, a course designed by CS4ALL, students will learn basic 
+            web design skills and learn to use and analyze NYC open data. '
+            /> 
+
         </div>
-     
-        <Dashboard choices={this.state.choices} />
+    );
+         
 
     </div>
           

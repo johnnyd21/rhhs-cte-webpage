@@ -1,46 +1,57 @@
-import React, { Component } from 'react';
+import React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    useParams,
+  } from "react-router-dom";
+  import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
+  import Home from './Home';
+  import Card from './Card';
+  import Achievement from './Acheivement';
+  
 
 
-function Navbar() {
-  return(
-  <nav className="navbar navbar-expand-lg">
-      <a className="navbar-brand" href="#">RHHS CTE</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
+class BootstrapNavbar extends React.Component{
 
-      <div className="collapse navbar-collapse">
-        <ul className="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-          </li>
-          
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Academies
-            </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+    render(){
+        return(
+            <div>
+                <div className="row">
+                    <div className="col-md-12">
+                        <Router>
+                            <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+                                <Navbar.Brand href="#home">RHHS CTE</Navbar.Brand>
+                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="mr-auto">
+                                    <Nav.Link href="/">Home</Nav.Link>
+                                    <NavDropdown title="Academies" id="basic-nav-dropdown">
+                                        <NavDropdown.Item href="#action/3.1">Software Engineering Academy</NavDropdown.Item>
+
+                                    </NavDropdown>
+                                    <Nav.Link href="/about-us">Student Achievement</Nav.Link>
+                                    </Nav>
+                                </Navbar.Collapse>
+                            </Navbar>
+                            <br />
+                            <Switch>
+                                <Route exact path="/">
+                                    <Home />
+                                </Route>
+                                <Route path="/about-us">
+                                    <Card />
+                                </Route>
+                                <Route path="/contact-us">
+                                    <Achievement />
+                                </Route>
+                            </Switch>
+                        </Router>
+                    </div>
+                </div>
             </div>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Lions TV</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-  );
+        )  
+    }
 }
 
-export default Navbar;
+export default BootstrapNavbar;

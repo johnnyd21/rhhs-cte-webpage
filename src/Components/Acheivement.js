@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Example() {
+function Achievement() {
   return (
-    <div className="Example">
+    <div className="Achievement">
       <h3>Hello example component!</h3>
     </div>
   );
 }
 
-export default Example;
+export default Achievement;
