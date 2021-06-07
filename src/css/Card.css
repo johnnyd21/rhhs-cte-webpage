@@ -1,3 +1,6 @@
+.card-bigcontainer{
+    display:flex;
+}
 .card-container{
 width: 300px;
 overflow: hidden;

@@ -1,5 +1,6 @@
 import React from 'react';
-import  './css/splash.css'
+import '../../css/splash.css';
+
 
 function Splash() {
   return(
