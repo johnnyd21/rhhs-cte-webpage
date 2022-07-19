@@ -5,16 +5,16 @@ import {
   NavMenu,
 } from './Navbarelements'
 
-const Navbar = () => {
+const Navbartop = () => {
   return (
     <>
       <Nav>
         <NavLink to='/'>
-          <img src={require('../../images/header_logo.png')} alt='logo' />
+          <img src={require('../../images/header_logo.png')} width="90" height="90" alt='logo' />
         </NavLink>
         <NavMenu>
         <NavLink to='/home' activeStyle>
-          <h1>Home</h1>
+          Home
         </NavLink>
           <NavLink to='/sep-academy' activeStyle>
             SEP Academy
@@ -31,4 +31,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbartop; 

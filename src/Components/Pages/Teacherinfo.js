@@ -1,7 +1,7 @@
 import React from 'react';
 import  '../../css/Card.css';
 
-function Card({title,imageUrl,body}) {
+function Teacherinfo({title,imageUrl,body,email,}) {
     return(       
 <div className= 'card-container'>
         <div className= "image-container">
@@ -14,10 +14,13 @@ function Card({title,imageUrl,body}) {
         <div className= "card-body">
             <p>{body}</p>
         </div>
+        <div className= "card-body">
+            <p>{email}</p>
+        </div>
     </div>    
 </div>
 
     )
 }
 
-export default Card; 
+export default Teacherinfo;

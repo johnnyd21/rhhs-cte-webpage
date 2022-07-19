@@ -1,18 +1,16 @@
-.card-bigcontainer{
-    display:flex;
-}
+
 .card-container{
-width: 300px;
+width: 1300px;
 overflow: hidden;
 box-shadow: 0px 0px 15px -5px;
 transition: 0.3s;
 animation: ease-in;
+margin: 0.5rem;
+margin-top: 1.8rem;
+color: maroon;
+font-size: 1.5em;
 }
 
-.card-container:hover{
-transform: scale(1.1);
-box-shadow: 0px 0px 15px 0px;
-}
 
 .image-container img{
     overflow: hidden;
@@ -20,8 +18,8 @@ box-shadow: 0px 0px 15px 0px;
 }
 
 .card-content{
-    margin: 1rem;
-    margin-top: 0.5rem;
+    margin: 2rem;
+    margin-top: 0.75rem;
 }
 
 h3,p{
@@ -33,24 +31,6 @@ h3,p{
     margin-bottom: 0.5rem;
 }
 
-.btn{
-    display:flex;
-    justify-content: center;
-}
-
-.btn button{
-    padding: 0.5rem;
-    background-color: white;
-    border: none;
-    transition: 0.2s;
-    margin-bottom: 0.5rem;
-    border-radius: 3px;
-}
-
-.btn button:hover{
-    background: rgba(27, 156, 252, 0.1);
-    transform: scale(1.);
-}
 
 a{
     text-transform: uppercase;
@@ -58,3 +38,14 @@ a{
     text-decoration: none;
     font-weight: bold;
 } 
+.gradedivide{
+    display: flex;
+    flex-Wrap: nowrap;
+    justify-Content: space-evenly;
+
+}
+.centertext{
+    display: flex;
+    justify-Content: center;
+    align-Items: center;
+}
